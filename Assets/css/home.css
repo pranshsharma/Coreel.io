@@ -8,7 +8,7 @@
     margin-top:30px;
 }
 .circle-wrapper {
-    height: 900px;
+    height: 90px;
     width: 90px;
     border-radius: 50%;
     background: linear-gradient(45deg,rgba(0, 255, 0, 0.603), rgba(0, 0, 250, 0.466) );
@@ -37,25 +37,28 @@
       inset 0 2px 6px rgba(0, 0, 0, 0.4),
       0 2px 8px rgba(0, 0, 0, 0.3);   
 }
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 .circle {
-    height: 100px;
-    width: 100px;
+    height: 83px;
+    width: 83px;
     border-radius: 50%;
     overflow: hidden;
     background: white;
-    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .circle img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-}
-.circle:active{
-    transform: translateY(0px) scale(0.98);
-    background: rgba(255, 255, 255, 0.04);
-    box-shadow:
-      inset 0 2px 6px rgba(0, 0, 0, 0.4),
-      0 2px 8px rgba(0, 0, 0, 0.3);   
 }
 .left{
     width:80px;
@@ -66,6 +69,8 @@
 .post_card{
     background-color: #3c40483b;
     width:150vh;
+    height:100vh;
+    display: grid;
     margin-left: 200px;
     margin-top: 70px;
     border-radius: 20px;
@@ -76,10 +81,12 @@
     display: flex;
     align-items: center;
     gap:10px;
+    margin-top:20px ;
+    margin-left: 30px;
 }
 .user_img{
-    height:52px;
-    width:52px;
+    height:30px;
+    width:30px;
     background: linear-gradient(45deg,rgba(0, 255, 0, 0.603), rgba(0, 0, 250, 0.466) );
     border-radius: 50%;
     display: flex;
@@ -87,30 +94,30 @@
     justify-content: center;
 }
 .user_img img{
-    height:45px;
-    width:45px;
+    height:25px;
+    width:25px;
     background: linear-gradient(45deg,rgba(0, 255, 0, 0.603), rgba(0, 0, 250, 0.466) );
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items:center;
 }
-.user_profile h3{
-    color: white;
+.user_profile p{
+    color: rgb(49, 49, 49);
     margin-top: -15px;
-    margin-left: 10px;
+
 }
 .user_account{
     font-size:13px;
-    color:rgba(255, 255, 255, 0.671);
+    color:rgba(58, 58, 58, 0.671);
     margin-top:20px;
-    margin-left: -70px;
+    margin-left: -60px;
 }
 .user_profile button{
     height:30px;
     width:70px;
-    color: white;
-    font-size: 17px;
+    color: rgb(48, 48, 48);
+    font-size: 13px;
     border: none;
     border-radius:10px;
     margin: 20px;
@@ -135,14 +142,42 @@
       inset 0 2px 6px rgba(0, 0, 0, 0.4),
       0 2px 8px rgba(0, 0, 0, 0.3); 
 }
-@keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.post{
+    background: rgba(255, 255, 255, 0.36);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(5.9px);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    width:500px;
+    margin-left:30px;
+    margin-top: 30px;
+}
+.post_img img{
+    height:400px;
+    width: 400px;
+    margin-left: 40px;
+    border-radius: 10px;
+    box-shadow:
+      inset 0 0.1px 2px rgba(0, 0, 0, 0.11),
+      0 0.1px 2px rgba(0, 0, 0, 0.3); 
+}
+.like{
+    margin-left: 40px;
+    background-color: #3c404800;
+    opacity:0.9;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.3s ease-in-out, tansform 0.3s ease-in-out;
+}
+.like:hover{
+    opacity: 1;
+}
+.like:active{
+    transform: translateY(0px) scale(0.98);
+}
+.comments{
+    border:none;
+    cursor: pointer;
+    background: none;
 }
