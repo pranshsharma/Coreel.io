@@ -69,7 +69,7 @@
 .post_card{
     background-color: #3c40483b;
     width:150vh;
-    height:100vh;
+    height:100%;
     display: grid;
     margin-left: 200px;
     margin-top: 70px;
@@ -181,3 +181,4 @@
     cursor: pointer;
     background: none;
 }
+
